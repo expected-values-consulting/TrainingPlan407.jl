@@ -34,24 +34,24 @@ function generate_training_table_data(content_title)
 end
 
 
-function write_training_log_to_file(ttd::TrainingTableData)
-    tl.write_table_to_file("training_log.tex", ttd)
+function write_training_log_to_file(ttd::TrainingTableData,destination::String)
+    tl.write_table_to_file("$(destination)/training_log.tex", ttd)
 end
 
-function write_training_plan_to_file(ttd::TrainingTableData)
-    tp.write_table_to_file("training_plan.tex", ttd)
+function write_training_plan_to_file(ttd::TrainingTableData,destination::String)
+    tp.write_table_to_file("$(destination)/training_plan.tex", ttd)
 end
 
-function write_training_book_list_to_file(ttd::TrainingTableData)
-    tb.write_training_book_list_to_file("training_book.tex", ttd)
+function write_training_book_list_to_file(ttd::TrainingTableData,destination::String)
+    tb.write_training_book_list_to_file("$(destination)/training_book.tex", ttd)
 end
 
-function write_training_assessment_to_file(ttd::TrainingTableData)
-    ta.write_table_to_file("training_assessment.tex", ttd)
+function write_training_assessment_to_file(ttd::TrainingTableData,destination::String)
+    ta.write_table_to_file("$(destination)/training_assessment.tex", ttd)
 end
 
-function write_training_assessment_results_to_file(file_name,ttd::TrainingTableData)
-    ta.write_training_assessment_to_file("training_assessment_results.tex",file_name)
+function write_training_assessment_results_to_file(file_name,ttd::TrainingTableData,destination::String)
+    ta.write_training_assessment_to_file("$(destination)/training_assessment_results.tex",file_name)
 end
 
 
